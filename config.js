@@ -36,18 +36,18 @@ config = {
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
+         mail: {
+             transport: 'SMTP',
+             options: {
+                 service: 'Gmail',
+                 auth: {
+                     user: 'the.excludedmiddle.blog@gmail.com', // mailgun username
+                     pass: 'NCC1701E'  // mailgun password
+                 }
+             },
+             from: 'The Excluded Middle <the.excludedMiddle.blog@gmail.com>'
+         },
+    
 
         database: {
             client: 'sqlite3',
