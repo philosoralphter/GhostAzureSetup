@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://ralphsamuel.azurewebsites.net/',
+        url: 'http://ralphsamuel.io',
         mail: {},
         database: {
             client: 'sqlite3',
@@ -19,6 +19,17 @@ config = {
             },
             debug: false
         },
+        mail: {
+             transport: 'SMTP',
+             options: {
+                 service: 'Gmail',
+                 auth: {
+                     user: 'the.excludedmiddle.blog@gmail.com', // mailgun username
+                     pass: 'NCC1701E'  // mailgun password
+                 }
+             },
+             from: 'The Excluded Middle <the.excludedMiddle.blog@gmail.com>'
+         },
 
         server: {
             // Host to be passed to node's `net.Server#listen()`
